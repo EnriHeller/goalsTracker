@@ -8,19 +8,10 @@ const goalSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    description:{
-        type: String,
-        required: true
-    },
-    category:{
-        type:[String],
-        default: ["Personal"]
-    },
     report:{
         type: String,
         enum: ["Daily", "Weekly","Monthly", "Final"],
-        default: "Weekly",
-        required: true
+        default: "Weekly"
     },
     deadline: {
         startDate: { type: Date, default: Date.now }, 
@@ -29,19 +20,27 @@ const goalSchema = new mongoose.Schema({
     incentive: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'incentives',
-      },
-    image:{
-        type: String
     },
     evidence:{
-        type: String,
+        type: {
+            title:{
+                type: String,
+                enum: ["PDF", "Video", "Photo", "Meeting", "Referent"]
+            },
+            archives: [String]
+        },
         required:true
-    },
+    }
+    /*
+    
+    that is data who change with user
+
     status: {
         type: Boolean,
         required: true,
         default: false
-    }
+    
+    } */
 })
 
 const goalModel = mongoose.model(goalCollection, goalSchema)
