@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const userCollection = 'users';
 
 const nameSchema = new mongoose.Schema({
