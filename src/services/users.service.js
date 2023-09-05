@@ -19,9 +19,6 @@ export class UsersService {
   }
 
   static async create(userPayload) {
-    if (!userPayload.name || !userPayload.lastname) {
-      throw new Error('Missing fields');
-    }
 
     userPayload.active = true;
 

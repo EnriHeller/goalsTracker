@@ -1,0 +1,14 @@
+{
+  "title": "Example Goal",
+  "description": "This is a goal description.",
+  "category": ["Personal", "Health"],
+  "report": "Weekly",
+  "deadline": {
+    "startDate": "2023-09-01T00:00:00.000Z",
+    "endDate": "2023-09-30T23:59:59.999Z"
+  },
+  "incentive": "64f6859bc203d2100a254737", 
+  "image": "image_url.jpg",
+  "evidence": "evidence_url.pdf",
+  "status": false
+}
