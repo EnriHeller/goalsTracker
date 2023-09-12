@@ -1,0 +1,65 @@
+[
+  {
+    "name": {
+      "firstName": "Juan",
+      "surName": "Pérez",
+      "username": "juanperez123"
+    },
+    "email": "juan@example.com",
+    "password": "contrasena123",
+    "sex": "M",
+    "birthYear": "1990-03-15T00:00:00.000Z",
+    "goal": {
+      "title":"lose weight",
+      "description":"You have to lose 20kg motherfucker",
+      "type": "other",
+      "otherEmail": "juanjosecasteli@gmail.com",
+      "report": "Weekly",
+      "deadline": {
+        "startDate": "2023-09-04T00:00:00.000Z",
+        "endDate": "2023-12-31T00:00:00.000Z"
+      },
+      "incentive": {
+        "isMonetary": true,
+        "details": {
+          "monetary": {
+            "amount": 1000,
+            "paymentMethod": "MP",
+            "useOfFunds": "Challenge"
+          },
+          "nonMonetary": null
+        }
+      }
+      ,
+      "image": "www.driveconimagenes/bajardepeso.jpg"
+    }
+  },{
+    "name": {
+      "firstName": "Ana",
+      "surName": "Gómez",
+      "username": "anagomez456"
+    },
+    "email": "ana@example.com",
+    "password": "contrasena456",
+    "sex": "F",
+    "birthYear": "1985-07-22T00:00:00.000Z",
+    "goal": {
+      "title": "Learn a new language",
+      "description": "Become fluent in English",
+      "type": "me",
+      "report": "Montly",
+      "deadline": {
+        "startDate": "2023-09-04T00:00:00.000Z",
+        "endDate": "2023-12-31T00:00:00.000Z"
+      },
+      "incentive": {
+        "isMonetary": false,
+        "details": {
+          "monetary": null,
+          "nonMonetary": "Personal satisfaction"
+        }
+      },
+      "image": null
+    }
+  }  
+]

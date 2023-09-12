@@ -20,9 +20,6 @@ export class GoalsService {
   }
 
   static async create(goalPayload) {
-    if (!goalPayload || !goalPayload.description) {
-      throw new Error('Goal description is required');
-    }
 
     // You can add additional validation here for other properties
 

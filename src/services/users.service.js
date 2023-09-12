@@ -1,5 +1,5 @@
 import UsersDao from '../models/daos/users.dao.js';
-
+import {GoalsService} from "./goals.service.js"
 export class UsersService {
   static async getAll() {
     return await UsersDao.getAll();
@@ -20,7 +20,18 @@ export class UsersService {
 
   static async create(userPayload) {
 
-    userPayload.active = true;
+    const {title, description, category, type, status, goal} = userPayload.goal 
+
+    if(!title && !description && !category){
+      await GoalsService.create({title,description,category})
+    }
+
+    if(type == "me"){
+      status = true
+    }
+
+    userPayload.goals = [goal]
+    delete userPayload.goal
 
     const newUser = await UsersDao.create(userPayload);
 
