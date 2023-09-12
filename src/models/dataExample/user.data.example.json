@@ -12,6 +12,7 @@
     "goal": {
       "title":"lose weight",
       "description":"You have to lose 20kg motherfucker",
+      "category": ["Health"],
       "type": "other",
       "otherEmail": "juanjosecasteli@gmail.com",
       "report": "Weekly",
@@ -46,6 +47,7 @@
     "goal": {
       "title": "Learn a new language",
       "description": "Become fluent in English",
+      "category":["Academic", "Personal"],
       "type": "me",
       "report": "Montly",
       "deadline": {
