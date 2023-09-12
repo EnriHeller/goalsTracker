@@ -1,5 +1,8 @@
 {
   "name": "goalstracker",
+  "engines": {
+    "node": "14.x"
+  },
   "version": "1.0.0",
   "type": "module",
   "description": "",

@@ -1,26 +1,34 @@
-import express from "express"
-import apiRoutes from "./src/routers/app.routers.js"
+import express from "express";
+import apiRoutes from "./src/routers/app.routers.js";
 import { dbConfig } from "./src/config/dbConfig.js";
-import cors from "cors"
-await dbConfig()
+import cors from "cors";
 
-const PORT = process.env.PORT || 8080;
-const app = express()
+// Create an async function to await dbConfig()
+const initializeApp = async () => {
+  await dbConfig();
 
-//Middlewares
-app.use(express.json())
-app.use(cors())
+  const PORT = process.env.PORT || 8080;
+  const app = express();
 
-//Routes
-app.use("/api", apiRoutes)
+  // Middlewares
+  app.use(express.json());
+  app.use(cors());
 
-//Listen
-const server= app.listen(PORT, ()=>{
-    console.log("Ready on port =>", PORT)
-})
+  // Routes
+  app.use("/api", apiRoutes);
 
-//Listeners
-server.on("error", (error)=>{
+  // Listen
+  const server = app.listen(PORT, () => {
+    console.log("Ready on port =>", PORT);
+  });
+
+  // Listeners
+  server.on("error", (error) => {
     console.log("There was an error in the server");
-    console.log(error)
-})
+    console.log(error);
+  });
+};
+
+// Call the async function to initialize the app
+initializeApp();
+

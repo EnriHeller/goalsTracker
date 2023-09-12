@@ -3,27 +3,14 @@ import mongoose from 'mongoose';
 const incentiveCollection = 'incentives'
 
 const incentiveSchema = new mongoose.Schema({
-  isMonetary: {
-    type: Boolean,
-    required: true,
+  amount: {
+    type: Number,
+    min: 0,
   },
-  details: {
-    monetary: {
-      amount: {
-        type: Number,
-        min: 0,
-      },
-      paymentMethod: {
-        type: String,
-        enum: ['Credit Card', 'PayPal', 'Cash', 'Bank Transfer', 'BTS'],
-      },
-      useOfFunds: {
-        type: String,
-        enum: ['Investment', 'Charity', 'Savings', 'Other'],
-      },
-    },
-    nonMonetary: String,
-  },
+  paymentMethod: {
+    type: String,
+    enum: ['BTC', "MP", "USDT"],
+  }
 });
 
 const incentiveModel = mongoose.model(incentiveCollection, incentiveSchema);
